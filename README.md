@@ -2,6 +2,18 @@
 
 Project simpel buat nyatet ide-ide keren pakai interface bergaya Sticky Notes. Dibangun pakai Next.js dipadukan dengan Tailwind CSS murni untuk desain yang clean dan estetik.
 
+## Preview Tampilan
+
+<div align="center">
+  <img src="public/screenshot-1.png" alt="Header View" width="800"/>
+  <br/><br/>
+  <img src="public/screenshot-2.png" alt="Notes View 1" width="800"/>
+  <br/><br/>
+  <img src="public/screenshot-3.png" alt="Notes View 2" width="800"/>
+  <br/><br/>
+  <img src="public/screenshot-4.png" alt="Footer View" width="800"/>
+</div>
+
 ## Fitur Utama
 
 - Tampilan notes dengan susunan zigzag (staggered) biar lebih dinamis.
