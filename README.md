@@ -48,3 +48,4 @@ Tinggal buka [http://localhost:3000](http://localhost:3000) di browser untuk mel
 
 ---
 Copyright © 2026.
+
