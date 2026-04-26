@@ -1,6 +1,6 @@
 # Sticky Notes
 
-Project simpel buat nyatet ide-ide keren pakai interface bergaya Sticky Notes. Dibangun pakai Next.js dipadukan dengan Tailwind CSS murni untuk desain yang clean dan estetik.
+Design simple buat latihan Next JS dasar yang interface nya bergaya Sticky Notes. Dibangun pakai Next.js dipadukan dengan Tailwind CSS murni untuk desain yang clean dan simple.
 
 ## Preview Tampilan
 
