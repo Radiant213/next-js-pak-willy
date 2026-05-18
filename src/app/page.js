@@ -1,14 +1,24 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 export default function Home() {
   // 1. State untuk nyimpen data notes (pakai data dummy dari desain lu biar langsung keliatan cakep)
   const [notes, setNotes] = useState([
-    { id: 1, title: 'Testimonials', desc: 'The only way to attract new clients, is to show your experience with the previous ones.', color: 'orange', pinColor: 'orange', rotate: '-rotate-2' },
-    { id: 2, title: 'Trust Badges', desc: 'Show all the achievements you have. Awards, certificates, payment protections, etc.', color: 'blue', pinColor: 'blue', rotate: 'rotate-3' },
-    { id: 3, title: 'Add Contacts', desc: 'People need to understand that if something will happen, they can always reach out to you.', color: 'purple', pinColor: 'purple', rotate: '-rotate-1' },
+    
   ]);
+
+  useEffect(() => {
+    const savedNotes = localStorage.getItem('LocalNotes');
+    if (savedNotes) {
+      setNotes(JSON.parse(savedNotes));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('LocalNotes', JSON.stringify(notes));
+  }, [notes]);
 
     // Konfigurasi Tema (Warna & Pin)
   const theme = {
@@ -54,8 +64,11 @@ export default function Home() {
   };
 
   const handleDeleteNote = (id) => {
-    const filteredNotes = notes.filter(note => note.id !== id);
-    setNotes(filteredNotes);
+    const confirmDelete = confirm("Apakah kamu yakin ingin menghapus catatan ini?");
+    if (confirmDelete) {
+      const updatedNotes = notes.filter(note => note.id !== id);
+      setNotes(updatedNotes);
+    }
   }
 
   const [selectedId, setSelectedId] = useState(null);
